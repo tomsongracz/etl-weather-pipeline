@@ -126,7 +126,7 @@ Przykłady wykresów z `analysis.ipynb`:
 * Rozkład warunków pogodowych (countplot)
 * Zależność prędkości wiatru i temperatury (scatterplot)
 
-Tutaj możesz dodać swoje obrazki PNG z folderu `/docs/plots/`, np.:
+Przykłady wykresów z folderu `/docs/plots/`:
 
 ```markdown
 ![Średnia temperatura](docs/plots/avg_temp.png)
