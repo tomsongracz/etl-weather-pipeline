@@ -119,7 +119,7 @@ Przy każdym **pushu** GitHub Actions:
 
 # Wizualizacje
 
-Przykłady wykresów z `analysis.ipynb`:
+Wykresy zawarte w `analysis.ipynb`:
 
 * Średnia temperatura w miastach (barplot)
 * Zmiany temperatury w czasie (lineplot)
