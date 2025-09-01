@@ -128,7 +128,8 @@ Przykłady wykresów z `analysis.ipynb`:
 
 Przykłady wykresów z folderu `/docs/plots/`:
 
-```markdown
+```
+markdown
 ![Średnia temperatura](docs/plots/avg_temp.png)
 ![Temperatura w czasie](docs/plots/temp_over_time.png)
 ![Histogram pogody](docs/plots/weather_distribution.png)
