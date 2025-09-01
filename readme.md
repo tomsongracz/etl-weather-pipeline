@@ -42,6 +42,9 @@ etl_project/
 │── tests/                  # Testy jednostkowe (pytest)
 │── notebooks/
 │    └── analysis.ipynb     # Analiza i wizualizacje
+│── docs/
+     └── plots/             # Folder na wykresy z Jupytera
+
 ```
 
 ---
