@@ -44,7 +44,6 @@ etl_project/
 │    └── analysis.ipynb     # Analiza i wizualizacje
 │── docs/
      └── plots/             # Folder na wykresy z Jupytera
-
 ```
 
 ---
