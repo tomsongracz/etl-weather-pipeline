@@ -1,0 +1,25 @@
+# Wersja pliku docker-compose 
+version: '3.9'
+
+services:
+  # Serwis bazy danych PostgreSQL
+  db:
+    # Oficjalny obraz PostgreSQL w wersji 15
+    image: postgres:15
+
+    # Nazwa kontenera (łatwiej odwoływać się po nazwie)
+    container_name: postgres_db
+
+    # Zmienne środowiskowe – wczytane z pliku .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}         # login użytkownika DB
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # hasło użytkownika
+      POSTGRES_DB: ${POSTGRES_DB}             # nazwa bazy danych
+
+    # Mapowanie portów: host:kontener
+    ports:
+      - "${POSTGRES_PORT}:5432"  # port DB widoczny w systemie
+
+    # Montowanie wolumenu – żeby dane bazy były trwałe
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data

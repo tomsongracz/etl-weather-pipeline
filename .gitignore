@@ -1,0 +1,20 @@
+# Pliki środowiskowe
+.env
+
+# Dane PostgreSQL z Dockera
+pgdata/
+
+# Pliki Jupytera
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtualenv
+venv/
+.venv/
+
+# Systemowe
+.DS_Store

@@ -1,0 +1,55 @@
+# Nazwa workflow widoczna w GitHub Actions
+name: CI
+
+# Kiedy uruchamiać workflow
+on: [push, pull_request]
+
+jobs:
+  build:                      # jeden job "build"
+    runs-on: ubuntu-latest    # GitHub daje maszynę Linux
+
+    services:
+      postgres:               # dodatkowy serwis PostgreSQL
+        image: postgres:15
+        env:                  # ustawiamy zmienne w kontenerze
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: etl_db
+        ports:
+          - 5432:5432         # wystawiamy port 5432
+        options: >-           # sprawdzanie, czy DB już działa
+          --health-cmd="pg_isready -U user -d etl_db"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      # 1. Pobieramy repozytorium
+      - uses: actions/checkout@v4
+
+      # 2. Instalujemy Pythona
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3. Instalujemy zależności
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # 4. Lint (sprawdzenie formatowania i błędów w kodzie)
+      - name: Lint
+        run: |
+          black --check .
+          flake8 .
+
+      # 5. Uruchamiamy testy
+      - name: Run tests
+        env:   # ustawiamy zmienne środowiskowe (takie same jak w .env)
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: etl_db
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+        run: pytest -v

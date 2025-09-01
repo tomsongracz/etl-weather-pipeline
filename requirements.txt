@@ -1,0 +1,31 @@
+# Pandas – obsługa i analiza danych w formie DataFrame
+pandas
+
+# Requests – wykonywanie zapytań HTTP (np. do API pogodowego)
+requests
+
+# SQLAlchemy – ORM i obsługa połączenia z bazą danych (PostgreSQL)
+SQLAlchemy
+
+# Psycopg2-binary – sterownik PostgreSQL potrzebny do SQLAlchemy
+psycopg2-binary
+
+# Pytest – framework do testowania kodu
+pytest
+
+# Jupyter – interaktywne środowisko notebooków do analizy danych
+jupyter
+
+# Matplotlib – biblioteka do wizualizacji danych (wykresy)
+matplotlib
+
+# Python-dotenv – obsługa plików .env (zmienne środowiskowe)
+python-dotenv
+
+# Seaborn – biblioteka do wizualizacji danych (opcjonalna, dodatkowe style wykresów)
+seaborn 
+
+# Narzędzia developerskie
+black
+flake8
+
