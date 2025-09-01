@@ -57,7 +57,7 @@ etl_project/
 1. **Sklonuj repozytorium:**
 
    ```bash
-   git clone https://github.com/your-username/etl-weather-pipeline.git
+   git clone https://github.com/tomsongracz/etl-weather-pipeline.git
    cd etl-weather-pipeline
    ```
 
