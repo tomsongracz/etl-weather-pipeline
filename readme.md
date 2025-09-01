@@ -39,11 +39,15 @@ etl_project/
 │── ci.yml                  # Workflow GitHub Actions (CI/CD)
 │── .gitignore              # Ignorowane pliki i foldery w repo
 │── readme.md               # Dokumentacja projektu
-│── tests/                  # Testy jednostkowe (pytest)
+│── tests/
+│    ├── test_fetch_weather.py
+│    ├── test_transform_weather.py
+│    └── test_load_weather.py
 │── notebooks/
 │    └── analysis.ipynb     # Analiza i wizualizacje
 │── docs/
      └── plots/             # Folder na wykresy z Jupytera
+
 ```
 
 ---
