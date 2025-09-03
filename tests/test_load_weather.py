@@ -29,15 +29,17 @@ def test_load_weather_to_postgres(engine):
 
     # Tworzymy przykładowy DataFrame
     df = pd.DataFrame(
-        [{
-            "temp_celsius": 20,
-            "wind_speed": 5,
-            "wind_dir": 180,
-            "timestamp": pd.Timestamp("2025-01-01 12:00"),
-            "city": "Warszawa",
-            "weathercode": 2,
-            "weather_desc": "Częściowe zachmurzenie",
-        }]
+        [
+            {
+                "temp_celsius": 20,
+                "wind_speed": 5,
+                "wind_dir": 180,
+                "timestamp": pd.Timestamp("2025-01-01 12:00"),
+                "city": "Warszawa",
+                "weathercode": 2,
+                "weather_desc": "Częściowe zachmurzenie",
+            }
+        ]
     )
 
     # Ładujemy dane do bazy danych
