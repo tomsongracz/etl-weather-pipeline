@@ -26,6 +26,7 @@ python-dotenv
 seaborn 
 
 # Narzędzia developerskie
-black
+black==25.1.0
 flake8
+
 
