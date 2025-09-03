@@ -6,7 +6,7 @@
 .PHONY: lint
 lint:
 	@echo "Running Black..."
-	black --exclude "pgdata" --check .
+	black --exclude "pgdata|notebooks" --check .
 	@echo "Running Flake8..."
 	flake8 .
 	@echo "Linting finished!"
