@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-# Lista miast wraz z ich współrzędnymi geograficznymi (szerokość i długość geograficzna)
+# Lista miast wraz z ich współrzędnymi geograficznymi
 CITIES = {
     "Warszawa": (52.2297, 21.0122),
     "Gdańsk": (54.3520, 18.6466),
@@ -48,3 +48,4 @@ if __name__ == "__main__":
     df = fetch_weather()
     # Wyświetlamy wynik
     print(df)
+
