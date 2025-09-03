@@ -1,6 +1,7 @@
 from fetch_weather import fetch_weather
 import pandas as pd
 
+
 def test_fetch_weather_returns_dataframe():
     # Pobieramy dane pogodowe za pomocą funkcji fetch_weather
     df = fetch_weather()
@@ -49,5 +50,3 @@ def test_windspeed_column_is_numeric():
     df = fetch_weather()
     # Sprawdzamy, czy kolumna windspeed zawiera liczby
     assert pd.api.types.is_numeric_dtype(df["windspeed"])
-
-
