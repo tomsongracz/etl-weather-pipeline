@@ -48,4 +48,3 @@ if __name__ == "__main__":
     df = fetch_weather()
     # Wyświetlamy wynik
     print(df)
-
