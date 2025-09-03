@@ -29,7 +29,6 @@ seaborn
 black==25.1.0
 flake8
 
-pytest-mock==3.14.0
 
 
 
