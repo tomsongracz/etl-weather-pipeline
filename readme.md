@@ -36,7 +36,6 @@ etl_project/
 │── requirements.txt        # Zależności Pythona
 │── docker-compose.yml      # Kontener PostgreSQL
 │── .env                    # Konfiguracja bazy
-│── ci.yml                  # Workflow GitHub Actions (CI/CD)
 │── .gitignore              # Ignorowane pliki i foldery w repo
 │── readme.md               # Dokumentacja projektu
 │── tests/
@@ -46,8 +45,10 @@ etl_project/
 │── notebooks/
 │    └── analysis.ipynb     # Analiza i wizualizacje
 │── docs/
-     └── plots/             # Folder na wykresy z Jupytera
-
+│    └── plots/             # Folder na wykresy z Jupytera
+└── .github/
+     └── workflows/
+          └── ci.yml        # Workflow GitHub Actions (CI/CD)
 ```
 
 ---
