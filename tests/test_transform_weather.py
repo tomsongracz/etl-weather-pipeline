@@ -1,4 +1,3 @@
-import pytest
 import pandas as pd
 from transform_weather import transform_weather
 
@@ -6,16 +5,14 @@ from transform_weather import transform_weather
 def test_transform_weather_changes_columns():
     # Tworzymy przykładowy DataFrame z minimalnymi danymi wejściowymi
     sample = pd.DataFrame(
-        [
-            {
-                "temperature": 20,
-                "windspeed": 5,
-                "winddirection": 180,
-                "time": "2025-01-01T12:00",
-                "city": "Warszawa",
-                "weathercode": 2,
-            }
-        ]
+        [{
+            "temperature": 20,
+            "windspeed": 5,
+            "winddirection": 180,
+            "time": "2025-01-01T12:00",
+            "city": "Warszawa",
+            "weathercode": 2,
+        }]
     )
 
     # Przetwarzamy dane za pomocą funkcji transform_weather
