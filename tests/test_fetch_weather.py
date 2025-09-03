@@ -1,6 +1,18 @@
 from fetch_weather import fetch_weather
 import pandas as pd
+from unittest.mock import patch
 
+@pytest.fixture
+def mock_api_response():
+    return {
+        "current_weather": {
+            "temperature": 20,
+            "windspeed": 5,
+            "winddirection": 180,
+            "weathercode": 2,
+            "time": "2025-01-01T12:00"
+        }
+    }
 
 def test_fetch_weather_returns_dataframe():
     # Pobieramy dane pogodowe za pomocą funkcji fetch_weather
@@ -50,3 +62,4 @@ def test_windspeed_column_is_numeric():
     df = fetch_weather()
     # Sprawdzamy, czy kolumna windspeed zawiera liczby
     assert pd.api.types.is_numeric_dtype(df["windspeed"])
+
