@@ -10,9 +10,11 @@ from load_weather import load_weather
 load_dotenv()
 
 DB_URL = (
-    f"postgresql://{os.getenv('POSTGRES_USER')}:{os.getenv('POSTGRES_PASSWORD')}"
-    f"@{os.getenv('POSTGRES_HOST', 'localhost')}:{os.getenv('POSTGRES_PORT', '5432')}"
-    f"/{os.getenv('POSTGRES_DB')}"
+    f"postgresql://{os.getenv('POSTGRES_USER')}:"
+    f"{os.getenv('POSTGRES_PASSWORD')}"
+    f"@{os.getenv('POSTGRES_HOST', 'localhost')}:"
+    f"{os.getenv('POSTGRES_PORT', '5432')}/"
+    f"{os.getenv('POSTGRES_DB')}"
 )
 
 
@@ -27,17 +29,15 @@ def test_load_weather_to_postgres(engine):
 
     # Tworzymy przykładowy DataFrame
     df = pd.DataFrame(
-        [
-            {
-                "temp_celsius": 20,
-                "wind_speed": 5,
-                "wind_dir": 180,
-                "timestamp": pd.Timestamp("2025-01-01 12:00"),
-                "city": "Warszawa",
-                "weathercode": 2,
-                "weather_desc": "Częściowe zachmurzenie",
-            }
-        ]
+        [{
+            "temp_celsius": 20,
+            "wind_speed": 5,
+            "wind_dir": 180,
+            "timestamp": pd.Timestamp("2025-01-01 12:00"),
+            "city": "Warszawa",
+            "weathercode": 2,
+            "weather_desc": "Częściowe zachmurzenie",
+        }]
     )
 
     # Ładujemy dane do bazy danych
