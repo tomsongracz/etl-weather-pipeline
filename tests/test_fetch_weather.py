@@ -1,4 +1,3 @@
-import pytest
 from fetch_weather import fetch_weather
 import pandas as pd
 
