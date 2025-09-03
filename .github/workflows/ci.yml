@@ -34,6 +34,9 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check Black version
+        run: black --version
+
       - name: Run lint
         run: make lint   # <-- używamy make, nie ręcznie black/flake8
 
